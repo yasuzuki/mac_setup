@@ -1,0 +1,54 @@
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  sudo: no
+  vars:
+    homebrew_packages_taps:
+      - homebrew/binary
+      - homebrew/dupes
+    homebrew_packages_packages:
+      - { name: readline }
+      - { name: openssl, state: linked }
+      - { name: ansible }
+      - { name: cmake }
+      - { name: ctags }
+      - { name: docker }
+      - { name: git }
+      - { name: hub }
+      - { name: imagemagick }
+      - { name: mercurial }
+      - { name: mysql }
+      - { name: pkg-config }
+      - { name: python }
+      - { name: qt }
+      - { name: redis }
+      - { name: rbenv }
+      - { name: ruby-build }
+      - { name: tmux }
+      - { name: xz }
+      - { name: wget }
+    homebrew_cask_packages_packages:
+      - appcleaner
+      - atom
+      - clamxav
+      - dashlane
+      - dropbox
+      - firefox
+      - google-chrome
+      - google-japanese-ime
+      - iterm2
+      - java
+      - karabiner
+      - kindle
+      - mysqlworkbench
+      - skype
+      - sourcetree
+      - vagrant
+      - virtualbox
+    atom_packages_packages:
+      - project-manager
+      - recent-files
+  roles:
+    - hnakamur.homebrew-packages
+    - hnakamur.homebrew-cask-packages
+    - hnakamur.atom-packages
