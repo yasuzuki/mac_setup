@@ -28,6 +28,7 @@
       - { name: xz }
       - { name: wget }
     homebrew_cask_packages_packages:
+      - alfred
       - appcleaner
       - atom
       - clamxav
@@ -39,8 +40,8 @@
       - iterm2
       - java
       - karabiner
-      - kindle
       - mysqlworkbench
+      - skitch
       - skype
       - sourcetree
       - vagrant
